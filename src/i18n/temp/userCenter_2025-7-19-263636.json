@@ -1,0 +1,30 @@
+{
+	"zh": {
+		"components.upgradeDialog.635573-0": "userCenter.upgradeDialog.view.购买会员",
+		"components.upgradeDialog.635573-1": "等级:",
+		"components.upgradeDialog.635573-2": "userCenter.upgradeDialog.view.权益说明",
+		"components.upgradeDialog.635573-3": "userCenter.upgradeDialog.view.价格",
+		"components.upgradeDialog.635573-4": "userCenter.upgradeDialog.view.支付方式",
+		"components.upgradeDialog.635573-5": "userCenter.upgradeDialog.view.链上支付",
+		"components.upgradeDialog.635573-6": "userCenter.upgradeDialog.view.线下支付",
+		"components.upgradeDialog.635573-7": "userCenter.upgradeDialog.view.支付",
+		"components.upgradeDialog.635573-8": "支付失败",
+		"components.upgradeDialog.635573-9": "userCenter.upgradeDialog.script.一键搬砖",
+		"components.upgradeDialog.635573-10": "userCenter.upgradeDialog.script.活动中心",
+		"components.upgradeDialog.635573-11": "userCenter.upgradeDialog.script.签到奖励"
+	},
+	"en": {
+		"components.upgradeDialog.635573-0": "",
+		"components.upgradeDialog.635573-1": "",
+		"components.upgradeDialog.635573-2": "",
+		"components.upgradeDialog.635573-3": "",
+		"components.upgradeDialog.635573-4": "",
+		"components.upgradeDialog.635573-5": "",
+		"components.upgradeDialog.635573-6": "",
+		"components.upgradeDialog.635573-7": "",
+		"components.upgradeDialog.635573-8": "",
+		"components.upgradeDialog.635573-9": "",
+		"components.upgradeDialog.635573-10": "",
+		"components.upgradeDialog.635573-11": ""
+	}
+}

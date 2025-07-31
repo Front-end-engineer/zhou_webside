@@ -1,0 +1,36 @@
+{
+	"zh": {
+		"components.Calendar.129468-0": "月",
+		"components.Calendar.129468-1": "已经连续签到",
+		"components.Calendar.129468-2": "天",
+		"components.Calendar.129468-3": "已签到",
+		"components.Calendar.129468-4": "未签到",
+		"components.Calendar.129468-5": "未开始",
+		"components.Calendar.129468-6": "周日",
+		"components.Calendar.129468-7": "周一",
+		"components.Calendar.129468-8": "周二",
+		"components.Calendar.129468-9": "周三",
+		"components.Calendar.129468-10": "周四",
+		"components.Calendar.129468-11": "周五",
+		"components.Calendar.129468-12": "周六",
+		"components.Calendar.129468-13": "年",
+		"components.Calendar.129468-14": "今天"
+	},
+	"en": {
+		"components.Calendar.129468-0": "",
+		"components.Calendar.129468-1": "",
+		"components.Calendar.129468-2": "",
+		"components.Calendar.129468-3": "",
+		"components.Calendar.129468-4": "",
+		"components.Calendar.129468-5": "",
+		"components.Calendar.129468-6": "",
+		"components.Calendar.129468-7": "",
+		"components.Calendar.129468-8": "",
+		"components.Calendar.129468-9": "",
+		"components.Calendar.129468-10": "",
+		"components.Calendar.129468-11": "",
+		"components.Calendar.129468-12": "",
+		"components.Calendar.129468-13": "",
+		"components.Calendar.129468-14": ""
+	}
+}

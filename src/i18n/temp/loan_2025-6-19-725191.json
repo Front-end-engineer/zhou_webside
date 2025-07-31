@@ -1,0 +1,22 @@
+{
+	"zh": {
+		"components.step2.250506-0": "提交资料",
+		"components.step2.250506-1": "审核中",
+		"components.step2.250506-2": "通过签合同",
+		"components.step2.250506-3": "您已提交资料，请耐心等待审核...",
+		"components.step2.250506-4": "审核不通过，请重新提交申请",
+		"components.step2.250506-5": "重新提交",
+		"components.step2.250506-6": "恭喜通过审核，签订合同后，即可享受服务",
+		"components.step2.250506-7": "签订合同"
+	},
+	"en": {
+		"components.step2.250506-0": "",
+		"components.step2.250506-1": "",
+		"components.step2.250506-2": "",
+		"components.step2.250506-3": "",
+		"components.step2.250506-4": "",
+		"components.step2.250506-5": "",
+		"components.step2.250506-6": "",
+		"components.step2.250506-7": ""
+	}
+}

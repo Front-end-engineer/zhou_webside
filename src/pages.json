@@ -1,0 +1,124 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/home/home",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/airdrop/index",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/announcement/index",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/login/findPassword",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/login/register",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/pledgedFinancial/index",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/movieBricks/index",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/announcement/newDetail",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom",
+        "disableScroll": true,
+        "enablePageScroll": true
+      }
+    },
+    {
+      "path": "pages/loan/index",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/activity/index",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/activity/signIn",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/activity/proActivities",
+      "style": {
+        "navigationBarTitleText": "ChainFuture",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "easycom": {
+    "Header": "/src/components/header.vue",
+    "Footer": "/src/components/footer.vue"
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

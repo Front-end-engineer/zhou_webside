@@ -1,0 +1,87 @@
+
+.flexContent{display: flex;justify-content: space-between;}
+
+.flexCenter{display: flex;align-items: center;}
+.flexBaseline{display: flex;align-items: baseline;}
+.flexCenters{display: flex;align-items: center;justify-content: center;}
+.flexCenterContent{display: flex;align-items: center;justify-content: space-between;}
+
+.flexStart{display: flex;align-items: flex-start;}
+.flexStartCenter{display: flex;align-items: flex-start;justify-content: center;}
+.flexStartContent{display: flex;align-items: flex-start;justify-content: space-between;}
+
+.flexEnd{display: flex;align-items: flex-end;}
+.flexEndCenter{display: flex;align-items: flex-end;justify-content: center;}
+.flexEndContent{display: flex;align-items: flex-end;justify-content: space-between;}
+
+.ydViewBody .flexContent,.ydViewBody .flexCenter,.ydViewBody .flexCenters,.ydViewBody .flexCenterContent,
+.ydViewBody .flexStart,.ydViewBody .flexStartCenter,.ydViewBody .flexStartContent,
+.ydViewBody .flexEnd,.ydViewBody .flexEndCenter,.ydViewBody .flexEndContent{flex-wrap: wrap;row-gap: 40rpx;}
+
+.gap20{column-gap: 20rpx;}
+.gap10{column-gap: 10rpx;}
+
+.flexColumn{display: flex;flex-direction: column;align-items: center;}
+.flexColumnBetween{display: flex;flex-direction: column;justify-content: space-between;}
+/* X和Y内容居中 */
+.flexColumnCenter{display: flex;flex-direction: column;align-items: center;justify-content: center;}
+
+
+.cpointer:hover {
+  cursor: pointer;
+}
+
+.fsize82{font-size: 63rpx;}
+
+.fsize32{font-size: 28rpx;}
+.fsize40{font-size: 28rpx;}
+.fsize52{font-size: 28rpx;}
+.fsize36{font-size: 28rpx;}
+.fsize60{font-size: 28rpx;}
+.fsize76{font-size: 28rpx;}
+.fsize48{font-size: 28rpx;}
+.fsize24{font-size: 28rpx;}
+
+.radius26{border-radius: 26rpx;}
+
+.cardForm .cardBoxLisInp{background-color: transparent !important;box-shadow: 0 0 0 1px #04606e inset;}
+.cardForm .elinputs .el-input__wrapper,.autostyle .el-select .el-select__wrapper{box-shadow: none;background: transparent !important;}
+.searchForm .el-select,.searchForm .el-input .el-input__wrapper{box-shadow: 0 0 0 1px #04606e inset;border-radius: 12rpx !important;}
+
+
+.tab[data-v-7d773963], .userbox .userNam .addresBotTab[data-v-7d773963], 
+.userbox .userNam .userGrade .useruUpgrade[data-v-7d773963], .userbox .userNam .userGradeTab[data-v-7d773963],
+.userbox .userNam .userReal[data-v-7d773963],.tablebox .newguideboxInB,.pricePart .userpropertyL .fundbthS,
+.pricePart .userpropertyMoney .statliMark,.pricePart .userpropertyMoney .statliMark,.radius20{
+  border-radius: 20rpx !important;
+}
+
+.martopbox{margin-top: 20px !important}
+
+
+.showhideicon{width: 40rpx;height: 25rpx;}
+.elinputs .el-input__wrapper {
+  background-color: #0f1f33;
+  box-shadow: 0 0 0 1px #0f1f33 inset;
+}
+.elinputs .el-input__wrapper .el-input__inner {
+  color: white;font-size: 30rpx;
+}
+
+
+
+.viewbody .el-table{
+  background-color: #013840 !important
+}
+/* .el-table th.el-table__cell{
+  background-color: #0E2E40 !important;
+}
+.el-table td.el-table__cell{
+  background-color: #091320 !important;color: white !important;
+}
+.el-table thead{
+  color: #8CBFD9 !important;
+}
+.el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf{
+  border-bottom: 1px solid #0D2537 !important;
+} */

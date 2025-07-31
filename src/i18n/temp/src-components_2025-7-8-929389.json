@@ -1,0 +1,34 @@
+{
+	"zh": {
+		"putAddres.putAddres.283735-0": "userCenter.walletRecord.view.收款地址管理",
+		"putAddres.putAddres.283735-1": "userCenter.walletExtract.view.链名称",
+		"putAddres.putAddres.283735-2": "userCenter.common.table.钱包地址",
+		"putAddres.putAddres.283735-3": "userCenter.common.table.备注",
+		"putAddres.putAddres.283735-4": "userCenter.common.value.添加",
+		"putAddres.putAddres.283735-5": "userCenter.walletRecord.view.钱包记录",
+		"putAddres.putAddres.283735-6": "userCenter.common.table.币种",
+		"putAddres.putAddres.283735-7": "userCenter.walletRecord.view.收款地址",
+		"putAddres.putAddres.283735-8": "userCenter.common.table.操作",
+		"putAddres.putAddres.283735-9": "userCenter.common.value.删除",
+		"putAddres.putAddres.283735-10": "userCenter.common.value.提示",
+		"putAddres.putAddres.283735-11": "userCenter.walletRecord.view.删除地址提示",
+		"putAddres.putAddres.283735-12": "userCenter.common.value.确认",
+		"putAddres.putAddres.283735-13": "请添加链信息！"
+	},
+	"en": {
+		"putAddres.putAddres.283735-0": "",
+		"putAddres.putAddres.283735-1": "",
+		"putAddres.putAddres.283735-2": "",
+		"putAddres.putAddres.283735-3": "",
+		"putAddres.putAddres.283735-4": "",
+		"putAddres.putAddres.283735-5": "",
+		"putAddres.putAddres.283735-6": "",
+		"putAddres.putAddres.283735-7": "",
+		"putAddres.putAddres.283735-8": "",
+		"putAddres.putAddres.283735-9": "",
+		"putAddres.putAddres.283735-10": "",
+		"putAddres.putAddres.283735-11": "",
+		"putAddres.putAddres.283735-12": "",
+		"putAddres.putAddres.283735-13": ""
+	}
+}

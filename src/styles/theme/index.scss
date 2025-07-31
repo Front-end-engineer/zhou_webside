@@ -1,0 +1,63 @@
+:deep(.el-form-item .el-form-item__label,
+.el-form-item__label-wrap .el-form-item__label) {
+  color: #fff;
+}
+
+:deep(.el-input) {
+  .el-input__wrapper {
+    background-color: #013840;
+    box-shadow: unset;
+    .el-input__inner {
+      color: #fff;
+    }
+    &.is-focus {
+      box-shadow: 0 0 0 1px #c0c4cc inset;
+    }
+  }
+}
+
+:deep(.el-select) {
+  .el-select__wrapper {
+    background-color: #013840;
+    box-shadow: unset;
+    .el-select__placeholder {
+      color: #fff;
+    }
+    .el-select__placeholder.is-transparent {
+      color: #a8abb2;
+    }
+    &.is-focused {
+      box-shadow: 0 0 0 1px #c0c4cc inset;
+    }
+  }
+}
+
+
+:deep(.el-checkbox) {
+  .el-checkbox__label {
+    color: #8cbfd9 !important;
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: #00bfbf;
+    border-color: #00bfbf;
+  }
+}
+
+:deep(.el-textarea) {
+  .el-textarea__inner {
+    background-color: #013840;
+    box-shadow: unset;
+    color: #fff;
+    &:focus {
+      box-shadow: 0 0 0 1px #c0c4cc inset;
+    }
+  }
+}
+
+
+.el-button {
+  background-color: #00bfbf !important;
+  border-color: #00bfbf !important;
+  padding: 10px 30px !important;
+  color: #fff !important;
+}

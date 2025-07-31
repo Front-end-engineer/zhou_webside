@@ -1,0 +1,18 @@
+{
+	"zh": {
+		"pledgedFinancial.index.840720-0": "本金",
+		"pledgedFinancial.index.840720-1": "违约金",
+		"pledgedFinancial.index.840720-2": "已经发放的奖励",
+		"pledgedFinancial.index.840720-3": "已经发放利息",
+		"pledgedFinancial.index.840720-4": "已经发放本金",
+		"pledgedFinancial.index.840720-5": "剩余本金"
+	},
+	"en": {
+		"pledgedFinancial.index.840720-0": "",
+		"pledgedFinancial.index.840720-1": "",
+		"pledgedFinancial.index.840720-2": "",
+		"pledgedFinancial.index.840720-3": "",
+		"pledgedFinancial.index.840720-4": "",
+		"pledgedFinancial.index.840720-5": ""
+	}
+}

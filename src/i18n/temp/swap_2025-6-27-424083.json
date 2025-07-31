@@ -1,0 +1,24 @@
+{
+	"zh": {
+		"swap.queryProList.239201-0": "交易",
+		"swap.queryProList.239201-1": "我的交易",
+		"swap.queryProList.239201-2": "持有人",
+		"swap.queryProList.239201-3": "地址",
+		"swap.queryProList.239201-4": "持仓",
+		"swap.queryProList.239201-5": "占比",
+		"swap.queryProList.239201-6": "交易时间",
+		"swap.queryProList.239201-7": "交易价值",
+		"swap.queryProList.239201-8": "交易额"
+	},
+	"en": {
+		"swap.queryProList.239201-0": "",
+		"swap.queryProList.239201-1": "",
+		"swap.queryProList.239201-2": "",
+		"swap.queryProList.239201-3": "",
+		"swap.queryProList.239201-4": "",
+		"swap.queryProList.239201-5": "",
+		"swap.queryProList.239201-6": "",
+		"swap.queryProList.239201-7": "",
+		"swap.queryProList.239201-8": ""
+	}
+}

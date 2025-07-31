@@ -1,0 +1,32 @@
+export default {
+  // br
+  "br_BNB Smart Chain Testnet": "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //搬砖BNB地址 test
+  "br_BNB Smart Chain": "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //搬砖BNB地址 正式
+  br_Ethereum: "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //搬砖eth地址
+  br_eth: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //搬砖以太坊地址
+  br_tron: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //搬砖波长地址
+  // ai
+  "ai_BNB Smart Chain Testnet": "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //兑换bnb地址 test
+  "ai_BNB Smart Chain": "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //兑换BNB地址 正式
+  ai_Ethereum: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //兑换eth地址
+  ai_eth: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //兑换eth地址
+  ai_tron: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //兑换波长地址
+  // pl
+  "pl_BNB Smart Chain Testnet": "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //质押bnb地址 test
+  "pl_BNB Smart Chain": "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //质押BNB地址 正式
+  pl_Ethereum: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //质押以太坊地址
+  pl_eth: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //质押以太坊地址
+  pl_tron: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //质押波长地址
+  // re
+  "re_BNB Smart Chain Testnet": "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //充值bnb地址 test
+  "re_BNB Smart Chain": "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //充值BNB地址 正式
+  re_Ethereum: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //充值以太坊地址
+  re_eth: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //充值以太坊地址
+  re_tron: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //充值波长地址
+  // buy
+  "buy_BNB Smart Chain Testnet": "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //购买会员bnb test
+  "buy_BNB Smart Chain": "0x1BAc34cBbEc65B4D021932812b92a386CC966cb2", //购买会员BNB地址 正式
+  buy_Ethereum: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //购买会员以太坊地址
+  buy_eth: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //购买会员以太坊地址
+  buy_tron: "0x75337195CF5F9e87E8ECDA536AD5DD2f6C1e3909", //购买会员波长地址
+};

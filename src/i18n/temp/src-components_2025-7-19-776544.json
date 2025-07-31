@@ -1,0 +1,10 @@
+{
+	"zh": {
+		"PledgeTransaction.PledgeTransaction.764719-0": "pledgedFinancial.index.名字",
+		"PledgeTransaction.PledgeTransaction.764719-1": "余额不足"
+	},
+	"en": {
+		"PledgeTransaction.PledgeTransaction.764719-0": "",
+		"PledgeTransaction.PledgeTransaction.764719-1": ""
+	}
+}

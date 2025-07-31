@@ -1,0 +1,174 @@
+const transferToken = async (tokenAddress, to, amount, contractAbi) => {
+  // ==================== 1. 参数预处理 ====================
+  const sender = await signer.getAddress();
+  const amountStr = amount.toString().trim();
+  
+  console.debug('转账参数:', {
+    tokenAddress,
+    to,
+    amount: amountStr,
+    sender,
+    abiLength: contractAbi?.length
+  });
+
+  // ==================== 2. 参数验证 ====================
+  try {
+    if (!ethers.isAddress(tokenAddress)) {
+      throw new Error(`无效的代币地址: ${tokenAddress}`);
+    }
+    
+    if (!ethers.isAddress(to)) {
+      throw new Error(`无效的接收地址: ${to}`);
+    }
+    
+    if (to.toLowerCase() === sender.toLowerCase()) {
+      throw new Error('不能转账给自己');
+    }
+    
+    const amountNum = parseFloat(amountStr.replace(/,/g, ''));
+    if (isNaN(amountNum) || amountNum <= 0) {
+      throw new Error(`无效的金额: ${amountStr}`);
+    }
+  } catch (validationErr) {
+    console.error('参数验证失败:', validationErr);
+    ElMessage.error(validationErr.message);
+    throw validationErr;
+  }
+
+  // ==================== 3. 合约初始化 ====================
+  let erc20;
+  try {
+    // 使用最小ABI避免冲突
+    const minimalAbi = [
+      "function decimals() view returns (uint8)",
+      "function balanceOf(address) view returns (uint256)",
+      "function transfer(address, uint256) returns (bool)"
+    ];
+    
+    erc20 = new ethers.Contract(
+      tokenAddress,
+      minimalAbi,
+      signer
+    );
+    
+    // 验证合约是否可调用
+    const code = await signer.provider.getCode(tokenAddress);
+    if (code === '0x') {
+      throw new Error('该地址不是有效的合约');
+    }
+  } catch (contractErr) {
+    console.error('合约初始化失败:', {
+      error: contractErr,
+      tokenAddress,
+      signerNetwork: await signer.provider?.getNetwork()
+    });
+    
+    ElMessage.error('代币合约初始化失败，请检查合约地址');
+    throw contractErr;
+  }
+
+  // ==================== 4. 获取代币信息 ====================
+  let decimals;
+  try {
+    // 带重试的decimals获取
+    for (let i = 0; i < 3; i++) {
+      try {
+        decimals = await erc20.decimals();
+        if (decimals > 36) throw new Error('异常decimals值');
+        break;
+      } catch (e) {
+        if (i === 2) {
+          console.warn('使用默认decimals 18');
+          decimals = 18;
+        }
+        await new Promise(r => setTimeout(r, 1000 * (i + 1)));
+      }
+    }
+    
+    console.debug('代币精度:', decimals);
+  } catch (decimalsErr) {
+    console.error('获取decimals失败:', decimalsErr);
+    ElMessage.error('无法获取代币精度信息');
+    throw decimalsErr;
+  }
+
+  // ==================== 5. 金额转换 ====================
+  let value;
+  try {
+    const amountNum = parseFloat(amountStr.replace(/,/g, ''));
+    value = ethers.parseUnits(
+      amountNum.toFixed(decimals),
+      decimals
+    );
+    
+    console.debug('转换后的金额:', {
+      original: amountStr,
+      parsed: amountNum,
+      value: value.toString()
+    });
+  } catch (amountErr) {
+    console.error('金额转换失败:', amountErr);
+    ElMessage.error('金额格式错误');
+    throw amountErr;
+  }
+
+  // ==================== 6. 余额检查 ====================
+  try {
+    const balance = await erc20.balanceOf(sender);
+    console.debug('账户余额:', {
+      raw: balance.toString(),
+      formatted: ethers.formatUnits(balance, decimals)
+    });
+    
+    if (balance < value) {
+      throw new Error(`余额不足 (需要: ${ethers.formatUnits(value, decimals)}, 当前: ${ethers.formatUnits(balance, decimals)})`);
+    }
+  } catch (balanceErr) {
+    console.error('余额检查失败:', balanceErr);
+    ElMessage.error(balanceErr.message.includes('revert') ? 
+      '余额查询被拒绝' : balanceErr.message);
+    throw balanceErr;
+  }
+
+  // ==================== 7. 执行转账 ====================
+  try {
+    console.debug('正在发送转账交易...');
+    const tx = await erc20.transfer(to, value, {
+      gasLimit: 100000 // 适当提高gas限制
+    });
+    
+    console.log('交易已发送:', {
+      hash: tx.hash,
+      explorerLink: `https://bscscan.com/tx/${tx.hash}`
+    });
+    
+    // 可选：等待交易确认
+    // const receipt = await tx.wait();
+    // console.log('交易已确认:', receipt);
+    
+    return tx.hash;
+  } catch (txErr) {
+    console.error('交易发送失败:', {
+      error: txErr,
+      transaction: {
+        from: sender,
+        to: tokenAddress,
+        value: value.toString(),
+        data: erc20.interface.encodeFunctionData('transfer', [to, value])
+      }
+    });
+    
+    // 分类错误处理
+    let userMessage = '转账失败';
+    if (txErr.code === 'ACTION_REJECTED') {
+      userMessage = '用户拒绝了交易';
+    } else if (txErr.message.includes('insufficient funds')) {
+      userMessage = 'Gas费不足，请充值BNB';
+    } else if (txErr.message.includes('revert')) {
+      userMessage = '合约拒绝执行转账';
+    }
+    
+    ElMessage.error(userMessage);
+    throw txErr;
+  }
+};

@@ -4,12 +4,10 @@ import { createPinia } from "pinia";
 import piniaPersistedState from "pinia-plugin-persistedstate";
 const pinia = createPinia();
 pinia.use(piniaPersistedState);
-import { QueryClient, VueQueryPlugin } from "@tanstack/vue-query";
 import i18n from "./locales";
 import Slideout from "@hyjiacan/vue-slideout";
 import "@hyjiacan/vue-slideout/dist/slideout.css";
 import "element-plus/dist/index.css";
-// import "lib-flexible/flexible.js"
 import "amfe-flexible";
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import "./styles/domstyle.css";
@@ -22,10 +20,6 @@ import "./styles/test5.css";
 
 import GlobalMethodsPlugin from "./utils/commonMethods";
 
-// import { componentPlugin } from "./components";
-// .use(componentPlugin)
-
-const queryClient = new QueryClient();
 const app = createApp(App);
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -33,7 +27,6 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 
 app
-  .use(VueQueryPlugin)
   .use(Slideout, {})
   .use(i18n)
   .use(pinia)

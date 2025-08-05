@@ -1,6 +1,4 @@
 <script setup>
-import TipDialog from "@/components/TipDialog/TipDialog.js";
-import { getUserInfo, getChainList } from "@/api/index";
 import { getPinia } from "/src/stores/index";
 
 const store = getPinia();
@@ -9,20 +7,6 @@ uni.$on("pageRouter", (event) => {
 });
 
 onLaunch(() => {
-  uni.TipDialog = TipDialog;
-  if (store.isLogin) {
-    getUserInfoApi();
-  }
-  getChainListApi();
-
-  // // 监听账户变化事件
-  // window.ethereum.on("accountsChanged", (accounts) => {
-  //   if (accounts.length > 0) {
-  //     console.log("当前连接的账户地址是:", accounts[0], accounts);
-  //   } else {
-  //     console.log("没有账户连接");
-  //   }
-  // });
   adjustFontSize();
   window.addEventListener("load", adjustFontSize);
   window.addEventListener("resize", adjustFontSize);
@@ -35,81 +19,19 @@ const isMobile = () => {
   return flag ? false : true;
 };
 
-const getChainListApi = async () => {
-  const res = await getChainList();
-  if (res.code === 1) {
-    store.setChainList(res.data.data);
-  }
-};
-
 const adjustFontSize = () => {
   store.UPWEBPORT(isMobile());
   let num = 120;
-  // let num = 132;
   if (!store.isWebPort) {
     num = 40;
   }
-  // if (store.isWebPort && window.innerWidth <= 900) return false;
-
-  // if (window.innerWidth < 2565 && window.innerWidth >= 2555) {
-  //   const rootFontSize = 2560 / num;
-  //   document.documentElement.style.fontSize = rootFontSize + "px";
-  // }
 
   if (window.innerWidth < 1922 && window.innerWidth >= 1912) {
     const rootFontSize = 1920 / num;
     document.documentElement.style.fontSize = rootFontSize + "px";
   }
-  // if (window.innerWidth < 1370 && window.innerWidth >= 1360) {
-  //   const rootFontSize = 1664 / num;
-  //   document.documentElement.style.fontSize = rootFontSize + "px";
-  // }
 };
-
-const getUserInfoApi = () => {
-  getUserInfo().then((res) => {
-    if (res.code == 1) {
-      store.UPLOGININFO(res.data.userinfo);
-    }
-  });
-};
-
-// import { createAppKit } from "@reown/appkit/vue";
-// import { arbitrum, mainnet, bsc, bscTestnet } from "@reown/appkit/networks";
-// import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
-
-// // 1. Get projectId from https://cloud.reown.com
-// const projectId = "bbe06d7704f2cb55157ec0a72578c086";
-
-// // 2. Create a metadata object
-// const metadata = {
-//   name: "robot",
-//   description: " ",
-//   icons: [""],
-// };
-
-// // 3. Set the networks
-// const networks = [mainnet, bsc, bscTestnet];
-
-// // 4. Create Wagmi Adapter
-// const wagmiAdapter = new WagmiAdapter({
-//   networks,
-//   projectId,
-// });
-
-// // 5. Create the modal
-// const modal = createAppKit({
-//   adapters: [wagmiAdapter],
-//   networks,
-//   projectId,
-//   metadata,
-//   features: {
-//     analytics: true, // Optional - defaults to your Cloud configuration
-//   },
-// });
 </script>
-
-<template>// Rest of your app ...</template>
 
 <style lang="less">
 page {

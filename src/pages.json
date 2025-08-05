@@ -11,15 +11,6 @@
       }
     },
     {
-      "path": "pages/airdrop/index",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
       "path": "pages/announcement/index",
       "style": {
         "navigationBarTitleText": "ChainFuture",
@@ -53,61 +44,6 @@
         "navigationStyle": "custom",
         "disableScroll": true,
         "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/pledgedFinancial/index",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/movieBricks/index",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/announcement/newDetail",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/loan/index",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/activity/index",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/activity/signIn",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/activity/proActivities",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom"
       }
     }
   ],

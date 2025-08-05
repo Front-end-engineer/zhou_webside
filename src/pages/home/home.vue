@@ -1,99 +1,102 @@
 <template>
-  <CommonHeader />
-  <!-- <TestNotice /> -->
-  <view class="container">
-    <view class="image-section">
-      <view
-        v-for="(image, index) in images"
-        :key="index"
-        class="image-wrapper"
-        :class="{ active: currentIndex === index }"
-        :style="{ top: `${index * 100}vh` }"
-      >
-        <!-- Show vdo1 if activeVideo is 'vdo1' -->
-        <video
-          :class="['video_play', activeVideo[index] !== 'vdo1' ? 'hide' : '']"
-          object-fit="cover"
-          preload="auto"
-          :src="image.vdo1"
-          :controls="false"
-          @loadedmetadata="onLoadedMetadata(index, 'vdo1', $event)"
-          @timeupdate="onTimeUpdate(index, 'vdo1', $event)"
-          @ended="onVideoEnded(index)"
-          :autoplay="autoplayStatus"
-          :loop="image.vdoStatus"
-          muted
-        ></video>
+  <view>
+    <CommonHeader />
+    <!-- <TestNotice /> -->
+    <view class="container">
+      <view class="image-section">
+        <view
+          v-for="(image, index) in images"
+          :key="index"
+          class="image-wrapper"
+          :class="{ active: currentIndex === index }"
+          :style="{ top: `${index * 100}vh` }"
+        >
+          <!-- Show vdo1 if activeVideo is 'vdo1' -->
+          <video
+            :class="['video_play', activeVideo[index] !== 'vdo1' ? 'hide' : '']"
+            object-fit="cover"
+            preload="auto"
+            :src="image.vdo1"
+            :controls="false"
+            @loadedmetadata="onLoadedMetadata(index, 'vdo1', $event)"
+            @timeupdate="onTimeUpdate(index, 'vdo1', $event)"
+            @ended="onVideoEnded(index)"
+            :autoplay="autoplayStatus"
+            :loop="image.vdoStatus"
+            muted
+          ></video>
 
-        <video
-          :class="['video_play', activeVideo[index] !== 'vdo2' ? 'hide' : '']"
-          object-fit="cover"
-          preload="auto"
-          ref="video2"
-          :src="image.vdo2"
-          :controls="false"
-          @loadedmetadata="onLoadedMetadata(index, 'vdo2', $event)"
-          @timeupdate="onTimeUpdate(index, 'vdo2', $event)"
-          @ended="onVideo2Ended(index)"
-          :autoplay="autoplayStatus"
-          :loop="image.vdo2Status"
-          muted
-        ></video>
+          <video
+            :class="['video_play', activeVideo[index] !== 'vdo2' ? 'hide' : '']"
+            object-fit="cover"
+            preload="auto"
+            ref="video2"
+            :src="image.vdo2"
+            :controls="false"
+            @loadedmetadata="onLoadedMetadata(index, 'vdo2', $event)"
+            @timeupdate="onTimeUpdate(index, 'vdo2', $event)"
+            @ended="onVideo2Ended(index)"
+            :autoplay="autoplayStatus"
+            :loop="image.vdo2Status"
+            muted
+          ></video>
 
-        <image :src="image.img" class="bgMobileImg"></image>
+          <image :src="image.img" class="bgMobileImg"></image>
 
-        <view class="section-one section-container" v-if="index === 0">
-          <view class="section-title-top hightbg">{{
-            $t("home.onchainPerpsTitle")
-          }}</view>
-          <view class="section-title-center oneCenter">
-            {{ $t("home.onchainPerpsSubtitleLine1") }}<br />
-            {{ $t("home.onchainPerpsSubtitleLine2") }}
+          <view class="section-one section-container" v-if="index === 0">
+            <view class="section-title-top hightbg"
+              >{{ $t("home.onchainPerpsTitle") }}
+              <br />
+              {{ $t("home.onchainPerpsTitle1") }}</view
+            >
+
+            <view class="section-title-center oneCenter">
+              {{ $t("home.onchainPerpsSubtitleLine1") }}<br />
+              {{ $t("home.onchainPerpsSubtitleLine2") }}
+            </view>
+            <view class="section-title-bottom">
+              <button @click="toSwap">{{ $t("home.tradeNowButton") }}</button>
+            </view>
           </view>
-          <view class="section-title-bottom">
-            <button @click="toSwap">{{ $t("home.tradeNowButton") }}</button>
-          </view>
-        </view>
 
-        <view class="section-two section-container" v-if="index === 1">
-          <view class="section-title-top hightbg">
-            {{ $t("home.permissionlessPerpsTitleLine1") }}<br />
-            {{ $t("home.permissionlessPerpsTitleLine2") }}
-          </view>
-          <view class="section-title-center twothreeCenter">
+          <view class="section-two section-container" v-if="index === 1">
+            <view class="section-title-top hightbg">
+              {{ $t("home.permissionlessPerpsTitleLine1") }}<br />
+              {{ $t("home.permissionlessPerpsTitleLine2") }}
+            </view>
+            <!-- <view class="section-title-center twothreeCenter">
             {{ $t("home.permissionlessPerpsContentLine1") }}<br />
             {{ $t("home.permissionlessPerpsContentLine2") }}
+          </view> -->
           </view>
-        </view>
 
-        <view class="section-three section-container" v-if="index == 2">
-          <view class="section-title-top">
-            <div class="tt hightbg">
-              <div>{{ $t("home.unlimitedLiquidityTitleLine1") }}</div>
-              <div>{{ $t("home.unlimitedLiquidityTitleLine2") }}</div>
-            </div>
-            <div class="hightlight" style="color: white">Oyster AMM</div>
-          </view>
-          <view class="section-title-center twothreeCenter">
-            {{ $t("home.oysterAmmDescriptionLine1") }}
-            {{ $t("home.oysterAmmDescriptionLine2") }}
-            {{ $t("home.oysterAmmDescriptionLine3") }}
+          <view class="section-three section-container" v-if="index == 2">
+            <view class="section-title-top">
+              <div class="tt hightbg">
+                <div>{{ $t("home.unlimitedLiquidityTitleLine1") }}</div>
+                <div>{{ $t("home.unlimitedLiquidityTitleLine2") }}</div>
+                <div>{{ $t("home.unlimitedLiquidityTitleLine3") }}</div>
+              </div>
+              <!-- <div class="hightlight" style="color: white">Oyster AMM</div> -->
+            </view>
+            <view class="section-title-center twothreeCenter">
+              {{ $t("home.oysterAmmDescriptionLine1") }}
+            </view>
           </view>
         </view>
       </view>
-    </view>
 
-    <!-- 官网内容区域 -->
-    <view class="home-page">
-      <div class="battle-tested" ref="numTargetElement">
-        <view class="top bigTitle">
-          {{ $t("home.battleTestedTitleLine1") }}<br />
-          <text class="hightlight_blue">3</text>
-          {{ $t("home.battleTestedTitleLine2") }}
-        </view>
-        <view class="bottom">
-          <view class="item">
-            <view class="item-title">
+      <!-- 官网内容区域 -->
+      <view class="home-page">
+        <div class="battle-tested" ref="numTargetElement">
+          <view class="top bigTitle">
+            {{ $t("home.battleTestedTitleLine1") }}<br />
+            <text class="hightlight_blue"></text>
+            {{ $t("home.battleTestedTitleLine2") }}
+          </view>
+          <view class="bottom">
+            <view class="item">
+              <!-- <view class="item-title">
               $
               <AnimatedNumber
                 :target-value="number"
@@ -103,13 +106,13 @@
                 :trigger-play="playTrigger"
               />
               B
+            </view> -->
+              <view class="item-subtitle">{{
+                $t("home.cumulativeTradingVolume")
+              }}</view>
             </view>
-            <view class="item-subtitle">{{
-              $t("home.cumulativeTradingVolume")
-            }}</view>
-          </view>
-          <view class="item">
-            <view class="item-title">
+            <view class="item">
+              <!-- <view class="item-title">
               <AnimatedNumber
                 :target-value="number2"
                 :duration="1000"
@@ -118,11 +121,11 @@
                 :trigger-play="playTrigger"
               />
               K
+            </view> -->
+              <view class="item-subtitle">{{ $t("home.allTimeTraders") }}</view>
             </view>
-            <view class="item-subtitle">{{ $t("home.allTimeTraders") }}</view>
-          </view>
-          <view class="item">
-            <view class="item-title">
+            <view class="item">
+              <!-- <view class="item-title">
               <AnimatedNumber
                 :target-value="number3"
                 :duration="1000"
@@ -130,366 +133,379 @@
                 :auto-play="false"
                 :trigger-play="playTrigger"
               />
+            </view> -->
+              <view class="item-subtitle">{{ $t("home.pairsListed") }}</view>
             </view>
-            <view class="item-subtitle">{{ $t("home.pairsListed") }}</view>
           </view>
-        </view>
-      </div>
-      <view class="industry-leaders">
-        <view class="top bigTitle">{{
-          $t("home.backedByIndustryLeaders")
-        }}</view>
-        <view class="bottom">
-          <view class="item">
-            <a
-              v-for="(item, index) in industryLeaders_Images['one']"
-              :key="index"
-              :href="item.path"
-              class="logo"
-            >
-              <image :src="`../../static/${item.imgUrl}.svg`" />
-            </a>
-          </view>
-          <view class="item">
-            <a
-              v-for="(item, index) in industryLeaders_Images['two']"
-              :key="index"
-              :href="item.path"
-              class="logo"
-            >
-              <image :src="`../../static/${item.imgUrl}.svg`" />
-            </a>
-          </view>
-          <view class="item">
-            <a
-              v-for="(item, index) in industryLeaders_Images['three']"
-              :key="index"
-              :href="item.path"
-              class="logo"
-            >
-              <image :src="`../../static/${item.imgUrl}.svg`" />
-            </a>
-          </view>
-        </view>
-      </view>
-      <view class="oyster-amm">
-        <view class="top bigTitle">
-          <div class="ott">
-            Unveiling <text class="hightlight_blue">Oyster AMM</text>,
-          </div>
-          <div>{{ $t("home.oysterAmmTitleLine2") }}</div>
-        </view>
-        <view class="bottom">
-          <view class="item_layout">
+        </div>
+        <view class="industry-leaders">
+          <view class="top bigTitle">{{
+            $t("home.backedByIndustryLeaders")
+          }}</view>
+          <view class="bottom">
             <view class="item">
-              <view class="item_oyster">
-                <view class="i_p_t hightlight_blue">{{
-                  $t("home.tradersSectionTitle")
-                }}</view>
-                <view class="i_p_c">{{
-                  $t("home.tradersSectionContentShort")
-                }}</view>
-                <view class="i_p_b">{{
-                  $t("home.tradersSectionContent")
-                }}</view>
-              </view>
-            </view>
-          </view>
-          <view class="item_layout">
-            <view class="item">
-              <view class="item_oyster">
-                <view class="i_p_t hightlight_blue">{{
-                  $t("home.liquidityProvidersSectionTitle")
-                }}</view>
-                <view class="i_p_c">{{
-                  $t("home.liquidityProvidersSectionContentShort")
-                }}</view>
-                <view class="i_p_b">{{
-                  $t("home.liquidityProvidersSectionContent")
-                }}</view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-      <view class="every-trader">
-        <view class="top bigTitle">{{
-          $t("home.designedForEveryTrader")
-        }}</view>
-        <view class="center">{{ $t("home.everyTraderDescription") }}</view>
-        <view class="bottom">
-          <view class="item">
-            <view class="item-in">
-              <view class="item-title">{{
-                $t("home.thirtySecondListings")
-              }}</view>
-              <view class="item-subtitle">{{
-                $t("home.thirtySecondListingsDesc")
-              }}</view>
-            </view>
-          </view>
-          <view class="item">
-            <view class="item-in">
-              <view class="item-title">{{ $t("home.unifiedLiquidity") }}</view>
-              <view class="item-subtitle">{{
-                $t("home.unifiedLiquidityDesc")
-              }}</view>
-            </view>
-          </view>
-          <view class="item">
-            <view class="item-in">
-              <view class="item-title">{{
-                $t("home.rigidRiskManagement")
-              }}</view>
-              <view class="item-subtitle">{{
-                $t("home.rigidRiskManagementDesc")
-              }}</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <div class="dapp" id="dapp" ref="dappEl">
-      <a
-        href=""
-        style="display: flex; justify-content: center"
-        rel="noreferrer noopener"
-        target="_blank"
-      >
-        <img
-          alt="Dapp"
-          src="../../static/dappbg2.png"
-          ref="animatedImg"
-          :style="{ transform: transformStyle }"
-        />
-      </a>
-    </div>
-
-    <div class="ecosystem-section">
-      <!-- Left content -->
-      <div class="syn-partner-left">
-        <div class="syn-partner-left-top">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M25.4142 20.9602L24.0002 22.3722C23.6312 22.7542 23.1898 23.059 22.7018 23.2686C22.2138 23.4782 21.6889 23.5886 21.1578 23.5932C20.6267 23.5978 20.1 23.4966 19.6084 23.2955C19.1168 23.0943 18.6702 22.7973 18.2946 22.4218C17.9191 22.0462 17.622 21.5996 17.4209 21.108C17.2198 20.6164 17.1186 20.0897 17.1232 19.5586C17.1278 19.0275 17.2382 18.5026 17.4478 18.0146C17.6574 17.5265 17.9622 17.0852 18.3442 16.7162L29.6042 5.45218C32.27 4.84584 35.0592 5.09538 37.5751 6.16533C40.091 7.23528 42.2055 9.07118 43.618 11.412C45.0305 13.7528 45.669 16.4793 45.4429 19.2038C45.2167 21.9284 44.1373 24.5123 42.3582 26.5882L38.8502 30.1422C38.7575 30.2362 38.6471 30.3109 38.5254 30.362C38.4037 30.4131 38.273 30.4396 38.141 30.44C38.009 30.4404 37.8782 30.4146 37.7562 30.3642C37.6342 30.3137 37.5234 30.2397 37.4302 30.1462L28.2422 20.9582C27.8669 20.5835 27.3581 20.3732 26.8278 20.3736C26.2975 20.374 25.789 20.585 25.4142 20.9602Z"
-              fill="url(#paint0_linear_344_3196)"
-            ></path>
-            <path
-              d="M15.514 13.888L22.34 7.06001C19.6276 5.38165 16.3929 4.75904 13.2513 5.31066C10.1097 5.86227 7.2806 7.5496 5.30224 10.0516C3.32388 12.5535 2.33438 15.6955 2.52205 18.8796C2.70971 22.0638 4.06143 25.0677 6.32 27.32L21.172 42.172C21.9221 42.9219 22.9393 43.3432 24 43.3432C25.0607 43.3432 26.0779 42.9219 26.828 42.172L34.608 34.394C34.7011 34.3011 34.775 34.1908 34.8254 34.0693C34.8758 33.9478 34.9018 33.8175 34.9018 33.686C34.9018 33.5545 34.8758 33.4242 34.8254 33.3027C34.775 33.1813 34.7011 33.0709 34.608 32.978L26.828 25.202L26.54 25.476C24.9929 26.8793 22.9584 27.6219 20.8711 27.5451C18.7838 27.4683 16.8093 26.5782 15.3696 25.0651C13.9298 23.5519 13.1389 21.5356 13.1659 19.4471C13.1929 17.3586 14.0356 15.3635 15.514 13.888Z"
-              fill="url(#paint1_linear_344_3196)"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_344_3196"
-                x1="18.8655"
-                y1="18.0002"
-                x2="35.8655"
-                y2="35.0002"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#47EBEB"></stop>
-                <stop offset="1" stop-color="#00BFBF"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_344_3196"
-                x1="33.5281"
-                y1="35.5"
-                x2="6.52808"
-                y2="8.5"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#99FFFF"></stop>
-                <stop offset="1" stop-color="white"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="syn-partner-left-middle">
-          <div class="syn-partner-left-middle-title">
-            {{ $t("home.ecosystemPartners") }}
-          </div>
-          <div class="syn-partner-left-middle-desc">
-            {{ $t("home.buildingWithTheBest") }}
-          </div>
-        </div>
-        <div class="syn-partner-left-bottom">
-          {{ $t("home.ecosystemPartnersDesc") }}
-        </div>
-        <a
-          class="syn-partner-left-btn"
-          href="javascript:void(0)"
-          rel="noreferrer"
-          @click="toSwap"
-          >{{ $t("home.joinUsButton") }}</a
-        >
-      </div>
-
-      <!-- Right scrolling logos -->
-      <div class="right-logos" :class="{ 'rotate-mobile': isMobile }">
-        <div class="logo-columns">
-          <div
-            v-for="(column, colIndex) in 3"
-            :key="colIndex"
-            :class="{ 'phone-logo-column': isMobile }"
-            class="logo-column"
-          >
-            <div class="logo-list">
-              <!-- Duplicate logos for infinite scroll -->
-              <div
-                v-for="(logo, index) in duplicatedLogos"
+              <a
+                v-for="(item, index) in industryLeaders_Images['one']"
                 :key="index"
-                :class="{ 'phone-logo-box': isMobile }"
-                class="logo-box"
+                :href="item.path"
+                class="logo"
               >
-                <img :src="logo" alt="logo" />
+                <image :src="`../../static/${item.imgUrl}.svg`" />
+              </a>
+            </view>
+            <view class="item">
+              <a
+                v-for="(item, index) in industryLeaders_Images['two']"
+                :key="index"
+                :href="item.path"
+                class="logo"
+              >
+                <image :src="`../../static/${item.imgUrl}.svg`" />
+              </a>
+            </view>
+            <view class="item">
+              <a
+                v-for="(item, index) in industryLeaders_Images['three']"
+                :key="index"
+                :href="item.path"
+                class="logo"
+              >
+                <image :src="`../../static/${item.imgUrl}.svg`" />
+              </a>
+            </view>
+          </view>
+        </view>
+        <view class="oyster-amm">
+          <view class="top bigTitle">
+            <div class="ott">
+              <text class="hightlight_blue">ODIN.FUN</text>的AMM自动做市，
+            </div>
+            <div style="text-align: center">
+              {{ $t("home.oysterAmmTitleLine2") }}
+            </div>
+            <div style="text-align: center">
+              {{ $t("home.oysterAmmTitleLine3") }}
+            </div>
+          </view>
+          <view class="bottom">
+            <view class="item_layout">
+              <view class="item">
+                <view class="item_oyster">
+                  <view class="i_p_t hightlight_blue">{{
+                    $t("home.tradersSectionTitle")
+                  }}</view>
+                  <view class="i_p_c">{{
+                    $t("home.tradersSectionContentShort")
+                  }}</view>
+                  <view class="i_p_b">{{
+                    $t("home.tradersSectionContent")
+                  }}</view>
+                </view>
+              </view>
+            </view>
+            <view class="item_layout">
+              <view class="item">
+                <view class="item_oyster">
+                  <view class="i_p_t hightlight_blue">{{
+                    $t("home.liquidityProvidersSectionTitle")
+                  }}</view>
+                  <view class="i_p_c">{{
+                    $t("home.liquidityProvidersSectionContentShort")
+                  }}</view>
+                  <view class="i_p_b">{{
+                    $t("home.liquidityProvidersSectionContent")
+                  }}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="every-trader">
+          <view class="top bigTitle">{{
+            $t("home.designedForEveryTrader")
+          }}</view>
+          <view class="center">{{ $t("home.everyTraderDescription") }}</view>
+          <view class="bottom">
+            <view class="item">
+              <view class="item-in">
+                <view class="item-title">{{
+                  $t("home.thirtySecondListings")
+                }}</view>
+                <text
+                  class="item-subtitle"
+                  v-html="$t('home.thirtySecondListingsDesc')"
+                ></text>
+              </view>
+            </view>
+            <view class="item">
+              <view class="item-in">
+                <view class="item-title">{{
+                  $t("home.unifiedLiquidity")
+                }}</view>
+                <text
+                  class="item-subtitle"
+                  v-html="$t('home.unifiedLiquidityDesc')"
+                ></text>
+              </view>
+            </view>
+            <view class="item">
+              <view class="item-in">
+                <view class="item-title">{{
+                  $t("home.rigidRiskManagement")
+                }}</view>
+                <view class="item-subtitle">{{
+                  $t("home.rigidRiskManagementDesc")
+                }}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <div class="dapp" id="dapp" ref="dappEl">
+        <a
+          href=""
+          style="display: flex; justify-content: center"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          <img
+            alt="Dapp"
+            src="../../static/dappbg2.png"
+            ref="animatedImg"
+            :style="{ transform: transformStyle }"
+          />
+        </a>
+      </div>
+
+      <div class="ecosystem-section">
+        <!-- Left content -->
+        <div class="syn-partner-left">
+          <div class="syn-partner-left-top">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.4142 20.9602L24.0002 22.3722C23.6312 22.7542 23.1898 23.059 22.7018 23.2686C22.2138 23.4782 21.6889 23.5886 21.1578 23.5932C20.6267 23.5978 20.1 23.4966 19.6084 23.2955C19.1168 23.0943 18.6702 22.7973 18.2946 22.4218C17.9191 22.0462 17.622 21.5996 17.4209 21.108C17.2198 20.6164 17.1186 20.0897 17.1232 19.5586C17.1278 19.0275 17.2382 18.5026 17.4478 18.0146C17.6574 17.5265 17.9622 17.0852 18.3442 16.7162L29.6042 5.45218C32.27 4.84584 35.0592 5.09538 37.5751 6.16533C40.091 7.23528 42.2055 9.07118 43.618 11.412C45.0305 13.7528 45.669 16.4793 45.4429 19.2038C45.2167 21.9284 44.1373 24.5123 42.3582 26.5882L38.8502 30.1422C38.7575 30.2362 38.6471 30.3109 38.5254 30.362C38.4037 30.4131 38.273 30.4396 38.141 30.44C38.009 30.4404 37.8782 30.4146 37.7562 30.3642C37.6342 30.3137 37.5234 30.2397 37.4302 30.1462L28.2422 20.9582C27.8669 20.5835 27.3581 20.3732 26.8278 20.3736C26.2975 20.374 25.789 20.585 25.4142 20.9602Z"
+                fill="url(#paint0_linear_344_3196)"
+              ></path>
+              <path
+                d="M15.514 13.888L22.34 7.06001C19.6276 5.38165 16.3929 4.75904 13.2513 5.31066C10.1097 5.86227 7.2806 7.5496 5.30224 10.0516C3.32388 12.5535 2.33438 15.6955 2.52205 18.8796C2.70971 22.0638 4.06143 25.0677 6.32 27.32L21.172 42.172C21.9221 42.9219 22.9393 43.3432 24 43.3432C25.0607 43.3432 26.0779 42.9219 26.828 42.172L34.608 34.394C34.7011 34.3011 34.775 34.1908 34.8254 34.0693C34.8758 33.9478 34.9018 33.8175 34.9018 33.686C34.9018 33.5545 34.8758 33.4242 34.8254 33.3027C34.775 33.1813 34.7011 33.0709 34.608 32.978L26.828 25.202L26.54 25.476C24.9929 26.8793 22.9584 27.6219 20.8711 27.5451C18.7838 27.4683 16.8093 26.5782 15.3696 25.0651C13.9298 23.5519 13.1389 21.5356 13.1659 19.4471C13.1929 17.3586 14.0356 15.3635 15.514 13.888Z"
+                fill="url(#paint1_linear_344_3196)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_344_3196"
+                  x1="18.8655"
+                  y1="18.0002"
+                  x2="35.8655"
+                  y2="35.0002"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#47EBEB"></stop>
+                  <stop offset="1" stop-color="#00BFBF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_344_3196"
+                  x1="33.5281"
+                  y1="35.5"
+                  x2="6.52808"
+                  y2="8.5"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#99FFFF"></stop>
+                  <stop offset="1" stop-color="white"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="syn-partner-left-middle">
+            <div class="syn-partner-left-middle-title">
+              {{ $t("home.ecosystemPartners") }}
+            </div>
+            <div class="syn-partner-left-middle-desc">
+              {{ $t("home.buildingWithTheBest") }}
+            </div>
+          </div>
+          <div class="syn-partner-left-bottom">
+            {{ $t("home.ecosystemPartnersDesc") }}
+          </div>
+          <a
+            class="syn-partner-left-btn"
+            href="javascript:void(0)"
+            rel="noreferrer"
+            @click="toSwap"
+            >{{ $t("home.joinUsButton") }}</a
+          >
+        </div>
+
+        <!-- Right scrolling logos -->
+        <div class="right-logos" :class="{ 'rotate-mobile': isMobile }">
+          <div class="logo-columns">
+            <div
+              v-for="(column, colIndex) in 3"
+              :key="colIndex"
+              :class="{ 'phone-logo-column': isMobile }"
+              class="logo-column"
+            >
+              <div class="logo-list">
+                <!-- Duplicate logos for infinite scroll -->
+                <div
+                  v-for="(logo, index) in duplicatedLogos"
+                  :key="index"
+                  :class="{ 'phone-logo-box': isMobile }"
+                  class="logo-box"
+                >
+                  <img :src="logo" alt="logo" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="news">
-      <div class="syn-news-container">
-        <div class="syn-news-container-top">
-          <div class="syn-news-container-top-title">
-            {{ $t("home.latestNewsTitle") }}
-          </div>
-          <div class="syn-news-container-top-tabs">
-            <div class="bg-newsTab">{{ $t("home.newsTab") }}</div>
-            <div class="syn-news-container-top-tabs-arrows">
-              <span
-                @click="goToPrev"
-                class="syn-news-container-top-tabs-arrows-arrow"
-                ><svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.04011 3.29289C8.43064 3.68342 8.43064 4.31658 8.04011 4.70711L5.74722 7H12.6663C13.2186 7 13.6663 7.44772 13.6663 8C13.6663 8.55228 13.2186 9 12.6663 9H5.74722L8.04011 11.2929C8.43064 11.6834 8.43064 12.3166 8.04011 12.7071C7.64959 13.0976 7.01643 13.0976 6.6259 12.7071L2.6259 8.70711C2.23538 8.31658 2.23538 7.68342 2.6259 7.29289L6.6259 3.29289C7.01643 2.90237 7.64959 2.90237 8.04011 3.29289Z"
-                    fill="white"
-                  ></path></svg
-              ></span>
-              <span
-                @click="goToNext"
-                class="syn-news-container-top-tabs-arrows-arrow"
-                ><svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.9594 3.29289C7.56887 3.68342 7.56887 4.31658 7.9594 4.70711L10.2523 7H3.33317C2.78089 7 2.33317 7.44772 2.33317 8C2.33317 8.55228 2.78089 9 3.33317 9H10.2523L7.9594 11.2929C7.56887 11.6834 7.56887 12.3166 7.9594 12.7071C8.34992 13.0976 8.98309 13.0976 9.37361 12.7071L13.3736 8.70711C13.7641 8.31658 13.7641 7.68342 13.3736 7.29289L9.37361 3.29289C8.98309 2.90237 8.34992 2.90237 7.9594 3.29289Z"
-                    fill="white"
-                  ></path></svg
-              ></span>
+      <div id="news">
+        <div class="syn-news-container">
+          <div class="syn-news-container-top">
+            <div class="syn-news-container-top-title">
+              {{ $t("home.latestNewsTitle") }}
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="news" style="position: relative">
-        <div class="left-line"></div>
-        <div class="news-box">
-          <swiper
-            class="news-container"
-            :circular="true"
-            :interval="200"
-            :current="currentSwiperIndex"
-          >
-            <swiper-item
-              class="news-content swiper-slide"
-              v-for="(item, index) in newsList"
-              :key="index"
-              @click="toNewDetail(item.id)"
-            >
-              <div class="news-bg"></div>
-              <div class="news-content-box">
-                <div>
-                  <div class="news-content-box-day">
-                    {{ item.create_time }}
-                  </div>
-                  <div class="news-content-box-title">
-                    {{ item.title }}
-                  </div>
-                </div>
-                <button class="news-content-button">
-                  {{ $t("home.detailButtonText") }}
+            <div class="syn-news-container-top-tabs">
+              <div class="bg-newsTab">{{ $t("home.newsTab") }}</div>
+              <div class="syn-news-container-top-tabs-arrows">
+                <div
+                  @click="goToPrev"
+                  class="syn-news-container-top-tabs-arrows-arrow"
+                >
                   <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="fill-gray-blue group-hover:fill-white"
                   >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M9.29289 17.7071C8.90237 17.3166 8.90237 16.6834 9.29289 16.2929L13.5858 12L9.29289 7.70711C8.90237 7.31658 8.90237 6.68342 9.29289 6.29289C9.68342 5.90237 10.3166 5.90237 10.7071 6.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L10.7071 17.7071C10.3166 18.0976 9.68342 18.0976 9.29289 17.7071Z"
+                      d="M8.04011 3.29289C8.43064 3.68342 8.43064 4.31658 8.04011 4.70711L5.74722 7H12.6663C13.2186 7 13.6663 7.44772 13.6663 8C13.6663 8.55228 13.2186 9 12.6663 9H5.74722L8.04011 11.2929C8.43064 11.6834 8.43064 12.3166 8.04011 12.7071C7.64959 13.0976 7.01643 13.0976 6.6259 12.7071L2.6259 8.70711C2.23538 8.31658 2.23538 7.68342 2.6259 7.29289L6.6259 3.29289C7.01643 2.90237 7.64959 2.90237 8.04011 3.29289Z"
+                      fill="white"
                     ></path>
                   </svg>
-                </button>
+                </div>
+                <div
+                  @click="goToNext"
+                  class="syn-news-container-top-tabs-arrows-arrow"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.9594 3.29289C7.56887 3.68342 7.56887 4.31658 7.9594 4.70711L10.2523 7H3.33317C2.78089 7 2.33317 7.44772 2.33317 8C2.33317 8.55228 2.78089 9 3.33317 9H10.2523L7.9594 11.2929C7.56887 11.6834 7.56887 12.3166 7.9594 12.7071C8.34992 13.0976 8.98309 13.0976 9.37361 12.7071L13.3736 8.70711C13.7641 8.31658 13.7641 7.68342 13.3736 7.29289L9.37361 3.29289C8.98309 2.90237 8.34992 2.90237 7.9594 3.29289Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-            </swiper-item>
-          </swiper>
+            </div>
+          </div>
+        </div>
+        <div class="news" style="position: relative">
+          <div class="left-line"></div>
+          <div class="news-box">
+            <swiper
+              class="news-container"
+              :circular="true"
+              :interval="200"
+              :current="currentSwiperIndex"
+            >
+              <swiper-item
+                class="news-content swiper-slide"
+                v-for="(item, index) in newsList"
+                :key="index"
+                @click="toNewDetail(item.id)"
+              >
+                <div class="news-bg"></div>
+                <div class="news-content-box">
+                  <div>
+                    <div class="news-content-box-day">
+                      {{ item.create_time }}
+                    </div>
+                    <div class="news-content-box-title">
+                      {{ item.title }}
+                    </div>
+                  </div>
+                  <button class="news-content-button">
+                    {{ $t("home.detailButtonText") }}
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="fill-gray-blue group-hover:fill-white"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.29289 17.7071C8.90237 17.3166 8.90237 16.6834 9.29289 16.2929L13.5858 12L9.29289 7.70711C8.90237 7.31658 8.90237 6.68342 9.29289 6.29289C9.68342 5.90237 10.3166 5.90237 10.7071 6.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L10.7071 17.7071C10.3166 18.0976 9.68342 18.0976 9.29289 17.7071Z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </swiper-item>
+            </swiper>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="community">
-      <div class="community-title">{{ $t("home.joinTheCommunity") }}</div>
-      <div class="community-btns">
-        <div class="click_btn" @click="toSwap">
-          {{ $t("home.getStartButton") }}
+      <div class="community">
+        <div class="community-title">{{ $t("home.joinTheCommunity") }}</div>
+        <div class="community-btns">
+          <div class="click_btn" @click="toSwap">
+            {{ $t("home.getStartButton") }}
+          </div>
+        </div>
+        <div class="community-socials">
+          <a
+            class="community-socials-item"
+            v-for="item in communityList"
+            rel="noopener noreferrer"
+            :href="item.url"
+            target="_blank"
+            :key="item.id"
+          >
+            <image :src="item.img" mode="heightFix"></image>
+          </a>
         </div>
       </div>
-      <div class="community-socials">
-        <a
-          class="community-socials-item"
-          v-for="item in communityList"
-          rel="noopener noreferrer"
-          :href="item.url"
-          target="_blank"
-          :key="item.id"
+
+      <!-- 右边悬浮 -->
+      <div id="fabs" class="float-social-container tablet">
+        <span
+          class="social-icon twitter"
+          v-for="(item, index) in communityList"
+          :key="index"
+          @click="toPath(item.url)"
         >
-          <image :src="item.img" mode="heightFix"></image>
-        </a>
+          <div class="social-icon-text">
+            {{ $t("home.followUsOn", { platform: item.title }) }}
+          </div>
+          <image :src="item.img" mode="heightFix" style="height: 21px"></image>
+        </span>
       </div>
-    </div>
 
-    <!-- 右边悬浮 -->
-    <div id="fabs" class="float-social-container tablet">
-      <span
-        class="social-icon twitter"
-        v-for="(item, index) in communityList"
-        :key="index"
-        @click="toPath(item.url)"
-      >
-        <div class="social-icon-text">
-          {{ $t("home.followUsOn", { platform: item.title }) }}
-        </div>
-        <image :src="item.img" mode="heightFix" style="height: 21px"></image>
-      </span>
-    </div>
-
-    <!-- 置顶按钮 -->
-    <CircleScrollProgress v-model="isVisible"></CircleScrollProgress>
-    <!-- <div
+      <!-- 置顶按钮 -->
+      <CircleScrollProgress v-model="isVisible"></CircleScrollProgress>
+      <!-- <div
       class="syn-scroll-to-top active-progress"
       @click="scrollToTop"
       v-show="isVisible"
@@ -511,8 +527,9 @@
         ></path>
       </svg>
     </div> -->
+    </view>
+    <Footer />
   </view>
-  <Footer />
 </template>
 
 <script setup>

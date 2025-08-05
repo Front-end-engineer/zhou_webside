@@ -54,7 +54,7 @@ service.interceptors.response.use(
         res.code === 4005
       ) {
         if (res.code !== 4002) {
-          window.location.href = "#/pages/login/login";
+          // window.location.href = "#/pages/login/login";
           store.UPUSERINFO(null);
           store.UPLOGININFO(null);
           // ElMessage.error(res.msg);

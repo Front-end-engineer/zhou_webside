@@ -4,43 +4,7 @@
     {
       "path": "pages/home/home",
       "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/announcement/index",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/login/findPassword",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/login/register",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
-        "navigationStyle": "custom",
-        "disableScroll": true,
-        "enablePageScroll": true
-      }
-    },
-    {
-      "path": "pages/login/login",
-      "style": {
-        "navigationBarTitleText": "ChainFuture",
+        "navigationBarTitleText": "nezha",
         "navigationStyle": "custom",
         "disableScroll": true,
         "enablePageScroll": true

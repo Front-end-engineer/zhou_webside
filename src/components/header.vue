@@ -19,7 +19,12 @@
           color: '#66b2ff',
         }"
       >
-        ODIN.FUN
+        <image
+          style="width: 90rpx; height: 90rpx"
+          src="@/static/images/logo.jpg"
+          mode="scaleToFill"
+        />
+        nezha
       </a>
 
       <view

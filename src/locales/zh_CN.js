@@ -5,6 +5,7 @@ export default {
   footer_learning: "学习中心",
   footer_services: "服务",
   footer_copyright: "© {year} ChainFuture。保留所有权利。",
+
   footer_rightsReserved: "保留所有权利。",
 
   "MsgNotification.MsgNotification.404380-0": "已读",

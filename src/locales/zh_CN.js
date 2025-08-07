@@ -4,7 +4,7 @@ export default {
   footer_products: "产品",
   footer_learning: "学习中心",
   footer_services: "服务",
-  footer_copyright: "© {year} ChainFuture。保留所有权利。",
+  footer_copyright: "© {year} nezha. 保留所有权利。",
   footer_rightsReserved: "保留所有权利。",
 
   "MsgNotification.MsgNotification.404380-0": "已读",
@@ -450,11 +450,8 @@ export default {
   "home.tradeNowButton": "立即交易",
   "home.permissionlessPerpsTitleLine1": "哪吒代币自由交易转账",
   "home.permissionlessPerpsTitleLine2": "分享网体结构",
-  "home.permissionlessPerpsContentLine1": "交易无尽的资产并自由列出",
-  "home.permissionlessPerpsContentLine2": "在30秒内创建新的交易对。",
-  "home.unlimitedLiquidityTitleLine1": "在 ODIN.FUN 上AMM机制，",
-  "home.unlimitedLiquidityTitleLine2": "做市商（Market Maker）",
-  "home.unlimitedLiquidityTitleLine3": "和 AMM（自动化做市商）机制",
+  "home.unlimitedLiquidityTitleLine1": "在 ODIN.FUN 上的",
+  "home.unlimitedLiquidityTitleLine2": "AMM机制，",
   "home.oysterAmmDescriptionLine1":
     "是其去中心化交易生态的核心组成部分，旨在为平台上哪吒主题代币提供流动性并优化交易体验",
   "home.oysterAmmDescriptionLine2": "链上的改进流动性。",
@@ -466,8 +463,8 @@ export default {
   "home.allTimeTraders": "Q4 2025：上线ODIN.FUN流动性挖矿 + 哪吒链游Alpha测试",
   "home.pairsListed": "2025：跨链至比特币侧链（Stacks），推出“封神宇宙”DAO",
   "home.backedByIndustryLeaders": "由行业领袖支持",
+  "home.oysterAmmTitleLine1": "的AMM自动做市，",
   "home.oysterAmmTitleLine2": "去中心化金融的新标准",
-  "home.oysterAmmTitleLine3": "交易者分币、流动性提供者分交易手续费",
   "home.tradersSectionTitle": "交易者",
   "home.tradersSectionContentShort": "无需许可的资产多样性。",
   "home.tradersSectionContent":

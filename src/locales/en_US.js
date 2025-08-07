@@ -4,7 +4,7 @@ export default {
   footer_products: "Products",
   footer_learning: "Learning Center",
   footer_services: "Services",
-  footer_copyright: "© {year} ChainFuture. All rights reserved.",
+  footer_copyright: "© {year} nezha. All rights reserved.",
   footer_rightsReserved: "All rights reserved.",
 
   "MsgNotification.MsgNotification.404380-0": "Read",
@@ -499,58 +499,74 @@ export default {
   "home.joinTheCommunity": "Join the community and start trading",
   "home.getStartButton": "Get started",
   "home.followUsOn": "Follow us on {platform}",
-  "home.ecosystemPartners": "Ecosystem Partners",
-  "home.buildingWithTheBest": "Building with the best",
+  "home.ecosystemPartners":
+    "ODIN.FUN, the Bitcoin decentralized exchange ecosystem partner",
+  "home.buildingWithTheBest": "Building consensus with the best partners",
   "home.ecosystemPartnersDesc":
-    "We partner with the best market makers, DeFi protocols, and L1s / L2s in Web3 to bring users the most robust onchain trading experience.",
+    "We partner with the best market makers, DeFi protocols, and L1/L2 providers in the Web3 space to provide users with the most robust on-chain trading experience.",
   "home.joinUsButton": "Join Us",
   "home.latestNewsTitle": "The latest",
   "home.newsTab": "News",
   "home.detailButtonText": "Detail",
-  "home.onchainPerpsTitle": "Onchain Perps for Any Asset",
+  "home.onchainPerpsTitle":
+    "The Bitcoin ecosystem is the cornerstone of the blockchain industry.",
+  "home.onchainPerpsTitle1": "It has unique value and widespread influence.",
   "home.onchainPerpsSubtitleLine1":
-    "Trade trending tokens and maximize your returns",
-  "home.onchainPerpsSubtitleLine2": "with unlimited opportunities",
+    "Trade Nezha tokens to maximize your returns.",
+  "home.onchainPerpsSubtitleLine2": "Unlimited opportunities.",
   "home.tradeNowButton": "Trade Now",
-  "home.permissionlessPerpsTitleLine1": "Permissionless Perps",
-  "home.permissionlessPerpsTitleLine2": "& Futures",
-  "home.permissionlessPerpsContentLine1":
-    "Trade an endless array of assets and freely list",
-  "home.permissionlessPerpsContentLine2": "new pairs in under 30 seconds.",
-  "home.unlimitedLiquidityTitleLine1": "Unlimited Liquidity",
-  "home.unlimitedLiquidityTitleLine2": "Boost Powered by",
+  "home.permissionlessPerpsTitleLine1":
+    "Nezha Tokens Can Be Traded and Transferred Freely",
+  "home.permissionlessPerpsTitleLine2": "Shared Network Structure",
+  "home.unlimitedLiquidityTitleLine1": "On ODIN.FUN",
+  "home.unlimitedLiquidityTitleLine2": "AMM Mechanism",
   "home.oysterAmmDescriptionLine1":
-    "Provide liquidity using Oyster AMM, a new solution that",
+    "It is a core component of its decentralized trading ecosystem, designed to provide liquidity for Nezha-themed tokens on the platform and optimize the trading experience",
+  "home.permissionlessPerpsContentLine2": "new pairs in under 30 seconds.",
   "home.oysterAmmDescriptionLine2":
     "combines the best of order book and AMM models fully",
   "home.oysterAmmDescriptionLine3": "onchain for improved liquidity.",
   "home.battleTestedTitleLine1": "Battle-tested across",
-  "home.battleTestedTitleLine2": "versions",
-  "home.cumulativeTradingVolume": "Cumulative Trading Volume",
-  "home.allTimeTraders": "All-time Traders",
-  "home.pairsListed": "Pairs Listed",
-  "home.backedByIndustryLeaders": "Backed by industry leaders",
-  "home.oysterAmmTitleLine2": "the new standard in DeFi",
-  "home.tradersSectionTitle": "Traders",
+  "home.battleTestedTitleLine2": "The Origins of Nezha's Development",
+  "home.cumulativeTradingVolume":
+    "Q3 2025: NZ Token IDO + Bitcoin Ecosystem Launch (ODIN.FUN)",
+  "home.allTimeTraders":
+    "Q4 2025: Launch of ODIN.FUN Liquidity Mining + Nezha Chain Game Alpha Test",
+  "home.pairsListed":
+    '2025: Cross-chain to Bitcoin Sidechain (Stacks), Launch of the "Fengshen Universe" DAO',
+  "home.backedByIndustryLeaders": "Backed by Industry Leaders",
+  "home.oysterAmmTitleLine1": "Automated Market Making with AMMs.",
+
+  "home.oysterAmmTitleLine2": "The New Standard in Decentralized Finance.",
+
+  "home.tradersSectionTitle": "Traders.",
+
   "home.tradersSectionContentShort": "Permissionless asset diversity.",
+
   "home.tradersSectionContent":
-    "Oyster AMM is designed for any asset and enables the most expansive decentralized derivatives marketplace for everything from blue-chip cryptocurrencies and altcoins to NFTs, Bitcoin hash rates, and more.",
-  "home.liquidityProvidersSectionTitle": "Liquidity Providers",
-  "home.liquidityProvidersSectionContentShort": "Efficiency beyond compare.",
+    "Works with any asset, offering the widest range of decentralized derivatives markets for everything from major cryptocurrencies and altcoins to NFTs, Bitcoin hashrate, and more.",
+
+  "home.liquidityProvidersSectionTitle": "Liquidity Providers.",
+
+  "home.liquidityProvidersSectionContentShort": "Unparalleled efficiency.",
+
   "home.liquidityProvidersSectionContent":
-    "Designed to maximize your liquidity, Oyster AMM provides a customizable toolset including concentrated liquidity and limit orders to deploy more robust LP strategies.",
-  "home.designedForEveryTrader": "Designed for every trader",
+    "Designed to maximize your liquidity, offering a customizable toolset, including pooled liquidity and limit orders, for deploying more robust LP strategies.",
+
+  "home.designedForEveryTrader": "Designed for Every Trader.",
+
   "home.everyTraderDescription":
-    "Our unique AMM design and streamlined user experience cater to all kinds of traders.",
-  "home.thirtySecondListings": "30-second listings",
+    "Our unique AMM design and streamlined user experience cater to all types of traders.",
+  "home.thirtySecondListings": "Steps to Adding Liquidity",
   "home.thirtySecondListingsDesc":
-    "A single-token liquidity model that enables users to freely list and trade any asset in seconds, without centralized intervention or DAO proposals.",
-  "home.unifiedLiquidity": "Unified liquidity",
+    'Go to the Liquidity Pool page<br/>Find the "Liquidity" or "Pool" option in the ODIN.FUN navigation bar.<br/>Select a trading pair<br/>Find the pool you want to provide liquidity to (e.g., NZ/USDT) and click "Add Liquidity."<br/>Enter the number of tokens<br/>The system will automatically calculate the ratio of the two tokens (usually 50:50). You can adjust the amount manually or select "Max" to deposit all. <br/>Approve Token Authorization<br/>When adding an LP for the first time, you must first "Approve" the smart contract to use your tokens (gas fees are required).<br/>Confirm and stake your LP tokens<br/>After confirming the transaction, you will receive an LP token (e.g., ODIN-NZ-USDT LP), representing your share of the pool.',
+
+  "home.unifiedLiquidity": "Fees and Dividends Mechanism",
   "home.unifiedLiquidityDesc":
-    "An innovative new liquidity paradigm that seamlessly integrates active and passive liquidity provisions, offering a unified liquidity system tailored to all.",
-  "home.rigidRiskManagement": "Rigid risk management",
+    "ODIN.FUN's AMM fees and dividends generally follow the following rules:<br/>1. Fee Source<br/>2. A 0.3% fee is charged for each transaction (industry standard). Distribution:<br/>LP Provider (you): Receives the majority of the fees (e.g., 0.25%).<br/>Platform (ODIN.FUN): The remaining portion (e.g., 0.05%) is used for ecosystem development or repurchase and destruction. ",
+  "home.rigidRiskManagement": "Rigid Risk Management",
   "home.rigidRiskManagementDesc":
-    "The best practices in TradFi and CeFi implemented to enable users to confidently trade on a protocol that's been tried and tested through multiple market cycles.",
+    "Implementing Bitcoin and Nezha best practices, allowing users to confidently trade on a protocol that has been tested through multiple market cycles.",
   "header.Languages": "Languages",
   "header.Products": "Products",
   "header.Home": "Home",

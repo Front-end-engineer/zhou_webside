@@ -44,7 +44,9 @@
           <image :src="image.img" class="bgMobileImg"></image>
 
           <view class="section-one section-container" v-if="index === 0">
-            <view class="section-title-top hightbg"
+            <view
+              class="section-title-top hightbg"
+              style="width: 80vw; word-wrap: break-word"
               >{{ $t("home.onchainPerpsTitle") }}
               <br />
               {{ $t("home.onchainPerpsTitle1") }}</view
@@ -54,11 +56,12 @@
               {{ $t("home.onchainPerpsSubtitleLine1") }}<br />
               {{ $t("home.onchainPerpsSubtitleLine2") }}
             </view>
-            <image
-              style="width: 9.7vw; height: 9.7vw; transform: rotateX(20deg)"
+            <!-- <image
+              class="nezha-bg"
+              style="transform: rotateX(20deg)"
               src="@/static/images/nezha1.jpg"
               mode="scaleToFill"
-            />
+            /> -->
           </view>
 
           <view class="section-two section-container" v-if="index === 1">
@@ -77,7 +80,7 @@
               <div class="tt hightbg">
                 <div>{{ $t("home.unlimitedLiquidityTitleLine1") }}</div>
                 <div>{{ $t("home.unlimitedLiquidityTitleLine2") }}</div>
-                <div>{{ $t("home.unlimitedLiquidityTitleLine3") }}</div>
+                <!-- <div>{{ $t("home.unlimitedLiquidityTitleLine3") }}</div> -->
               </div>
               <!-- <div class="hightlight" style="color: white">Oyster AMM</div> -->
             </view>
@@ -152,7 +155,10 @@
                 :href="item.path"
                 class="logo"
               >
-                <image :src="`../../static/${item.imgUrl}.svg`" />
+                <image
+                  :src="`../../static/images/${item.imgUrl}.jpg`"
+                  mode="widthFix"
+                />
               </a>
             </view>
             <view class="item">
@@ -162,17 +168,23 @@
                 :href="item.path"
                 class="logo"
               >
-                <image :src="`../../static/${item.imgUrl}.svg`" />
+                <image
+                  :src="`../../static/images/${item.imgUrl}.jpg`"
+                  mode="widthFix"
+                />
               </a>
             </view>
             <view class="item">
               <a
                 v-for="(item, index) in industryLeaders_Images['three']"
                 :key="index"
-                :href="item.path"
+                href="#"
                 class="logo"
               >
-                <image :src="`../../static/${item.imgUrl}.svg`" />
+                <image
+                  :src="`../../static/images/${item.imgUrl}.jpg`"
+                  mode="widthFix"
+                />
               </a>
             </view>
           </view>
@@ -180,14 +192,12 @@
         <view class="oyster-amm">
           <view class="top bigTitle">
             <div class="ott">
-              <text class="hightlight_blue">ODIN.FUN</text>的AMM自动做市，
+              <text class="hightlight_blue">ODIN.FUN</text
+              >{{ $t("home.oysterAmmTitleLine1") }}
             </div>
             <div style="text-align: center">
               {{ $t("home.oysterAmmTitleLine2") }}
             </div>
-            <!-- <div style="text-align: center">
-              {{ $t("home.oysterAmmTitleLine3") }}
-            </div> -->
           </view>
           <view class="bottom">
             <view class="item_layout">
@@ -364,7 +374,7 @@
                   <img
                     :src="logo"
                     alt="logo"
-                    style="transform: rotate(180deg)"
+                    style="transform: rotate(180deg); border-radius: 12rpx"
                   />
                 </div>
               </div>
@@ -434,7 +444,7 @@
       </svg>
     </div> -->
     </view>
-    <!-- <Footer /> -->
+    <Footer />
   </view>
 </template>
 
@@ -502,7 +512,7 @@ const checkPlay = () => {
 };
 
 const toSwap = () => {
-  uni.navigateTo({ url: `/pages/swap/index` });
+  window.open("https://t.me/NEZHAODIN");
 };
 
 let newsList = ref([]);
@@ -560,22 +570,24 @@ const toNewDetail = (id) => {
 
 let industryLeaders_Images = reactive({
   one: [
-    { imgUrl: "biimg1", path: "" },
-    { imgUrl: "biimg2", path: "" },
-    { imgUrl: "biimg3", path: "" },
-    { imgUrl: "biimg4", path: "" },
-    { imgUrl: "biimg5", path: "" },
+    { imgUrl: "friend1", path: "" },
+    { imgUrl: "friend2", path: "" },
+    { imgUrl: "friend3", path: "" },
+    { imgUrl: "friend4", path: "" },
+    { imgUrl: "friend5", path: "" },
   ],
   two: [
-    { imgUrl: "biimg6", path: "" },
-    { imgUrl: "biimg7", path: "" },
-    { imgUrl: "biimg8", path: "" },
-    { imgUrl: "biimg9", path: "" },
+    { imgUrl: "friend6", path: "" },
+    { imgUrl: "friend7", path: "" },
+    { imgUrl: "friend8", path: "" },
+    { imgUrl: "friend9", path: "" },
+    { imgUrl: "friend10", path: "" },
   ],
   three: [
-    { imgUrl: "biimg10", path: "" },
-    { imgUrl: "biimg11", path: "" },
-    { imgUrl: "biimg12", path: "" },
+    { imgUrl: "friend11", path: "" },
+    { imgUrl: "friend12", path: "" },
+    { imgUrl: "friend13", path: "" },
+    { imgUrl: "friend14", path: "" },
   ],
 });
 
@@ -678,7 +690,7 @@ const socialList = [
 const communityList = ref([
   {
     img: "../../static/images/icon1.png",
-    url: "#",
+    url: "https://t.me/NEZHAODIN",
     id: 1,
     title: "Telegram",
   },
@@ -696,7 +708,7 @@ const communityList = ref([
   // },
   {
     img: "../../static/images/icon4.png",
-    url: "#",
+    url: "https://x.com/NezhaOdinfun",
     id: 4,
     title: "Twitter",
   },
@@ -1220,8 +1232,13 @@ onHide(() => {
   }
 
   .section-one {
+    top: 18vh !important;
     .oneCenter {
       font-size: 28px;
+    }
+    .nezha-bg {
+      width: 22vh;
+      height: 22vh;
     }
     @media (min-width: 1600px) {
       .oneCenter {
@@ -1236,7 +1253,11 @@ onHide(() => {
       }
     }
     @media (max-width: 900px) {
-      top: 76px !important;
+      top: 15vh !important;
+      .nezha-bg {
+        width: 80px;
+        height: 80px;
+      }
       .oneCenter {
         font-size: 18px !important;
         line-height: 27px;
@@ -1428,7 +1449,7 @@ onHide(() => {
         align-items: center;
 
         image {
-          width: 71%;
+          width: 60%;
         }
       }
     }
@@ -1669,6 +1690,13 @@ onHide(() => {
           font-weight: 400;
           line-height: 24px;
           text-align: left;
+          height: 100%;
+          overflow-y: scroll;
+          -ms-overflow-style: none; /* IE, Edge */
+          scrollbar-width: none; /* Firefox */
+          &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+          }
 
           @media (max-width: 900px) {
             font-size: 14px;

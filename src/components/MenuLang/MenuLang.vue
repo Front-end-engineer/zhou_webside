@@ -41,6 +41,8 @@
 </template>
 
 <script setup>
+const { locale } = useI18n();
+
 const memuList = ref([
   {
     svgPath: `<svg
@@ -112,9 +114,11 @@ let lang = ref(uni.getStorageSync("locale_lang") || "ZH");
 
 const clickMenuLang = (val) => {
   if (lang.value == val) return false;
+  locale.value = val;
+  uni.setLocale(val);
   lang.value = val;
+
   uni.setStorageSync("locale_lang", val);
-  location.reload();
 };
 </script>
 

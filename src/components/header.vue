@@ -20,7 +20,7 @@
         }"
       >
         <image
-          style="width: 90rpx; height: 90rpx"
+          style="width: 90rpx; height: 90rpx; border-radius: 10rpx"
           src="@/static/images/logo.jpg"
           mode="scaleToFill"
         />

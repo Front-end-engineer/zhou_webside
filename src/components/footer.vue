@@ -77,7 +77,7 @@
   >
     <view class="content">
       <view class="footer-copyright"
-        >© 2025 ChainFutures. {{ $t("footer_rightsReserved") }}</view
+        >© 2025 nezha. {{ $t("footer_rightsReserved") }}</view
       >
       <view class="footer-community">
         <view class="footer-community-title">{{ $t("footer_community") }}</view>

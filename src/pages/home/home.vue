@@ -65,7 +65,7 @@
           </view>
 
           <view class="section-two section-container" v-if="index === 1">
-            <view class="section-title-top hightbg">
+            <view class="section-title-top hightbg" style="width: 80vw">
               {{ $t("home.permissionlessPerpsTitleLine1") }}<br />
               {{ $t("home.permissionlessPerpsTitleLine2") }}
             </view>

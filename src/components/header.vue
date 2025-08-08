@@ -43,7 +43,12 @@
         class="logo"
         style="font-size: 48rpx; font-weight: bold; color: #66b2ff"
       >
-        ODIN.FUN
+        <image
+          style="width: 90rpx; height: 90rpx; border-radius: 10rpx"
+          src="@/static/images/logo.jpg"
+          mode="scaleToFill"
+        />
+        nezha
       </a>
       <view class="right">
         <MenuLang></MenuLang>

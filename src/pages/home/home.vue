@@ -1948,6 +1948,7 @@ onHide(() => {
       row-gap: 24px;
 
       @media (max-width: 900px) {
+        align-items: center;
         text-align: center;
       }
 

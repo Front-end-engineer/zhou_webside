@@ -1,7 +1,7 @@
 <template>
   <view class="index_footer" v-if="isHome">
     <view class="common_footer">
-      <view class="content" v-if="footerShow">
+      <!-- <view class="content" v-if="footerShow">
         <view class="items">
           <view class="title">{{ $t("footer_community") }}</view>
           <view class="list">
@@ -64,7 +64,7 @@
             </view>
           </view>
         </view>
-      </view>
+      </view> -->
     </view>
     <view class="copyright">{{
       $t("footer_copyright", { year: 2025, company: "ChainFutures" })
@@ -79,7 +79,7 @@
       <view class="footer-copyright"
         >© 2025 nezha. {{ $t("footer_rightsReserved") }}</view
       >
-      <view class="footer-community">
+      <!-- <view class="footer-community">
         <view class="footer-community-title">{{ $t("footer_community") }}</view>
         <a
           v-for="(item, index) in footerList.type3"
@@ -88,7 +88,7 @@
         >
           <image :src="item.img" mode="heightFix"></image>
         </a>
-      </view>
+      </view> -->
     </view>
   </footer>
 </template>

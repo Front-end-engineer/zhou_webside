@@ -4,7 +4,7 @@ export default {
   footer_products: "产品",
   footer_learning: "学习中心",
   footer_services: "服务",
-  footer_copyright: "© {year} nezha. 保留所有权利。",
+  footer_copyright: "© {year} NEZHA. 保留所有权利。",
   footer_rightsReserved: "保留所有权利。",
 
   "MsgNotification.MsgNotification.404380-0": "已读",
@@ -435,7 +435,7 @@ export default {
   "home.getStartButton": "立即开始",
   "home.followUsOn": "在{platform}关注我们",
   "home.ecosystemPartners":
-    "比特币去中心化交易所 ODIN.FUN 生态系统合作伙伴哪吒",
+    "比特币去中心化交易所 ODIN.FUN 生态系统合作伙伴 NEZHA",
   "home.buildingWithTheBest": "与最优秀的伙伴共建共识",
   "home.ecosystemPartnersDesc":
     "我们与Web3领域中最出色的做市商、DeFi协议以及L1/L2合作，为用户提供最稳健的链上交易体验。",
@@ -445,22 +445,22 @@ export default {
   "home.detailButtonText": "详情",
   "home.onchainPerpsTitle": "比特币生态作为区块链行业的基石",
   "home.onchainPerpsTitle1": "具有独特的价值和广泛的影响力",
-  "home.onchainPerpsSubtitleLine1": "交易哪吒代币最大化您的回报，",
+  "home.onchainPerpsSubtitleLine1": "交易NEZHA Token最大化您的回报，",
   "home.onchainPerpsSubtitleLine2": "拥有无限的机会",
   "home.tradeNowButton": "立即交易",
-  "home.permissionlessPerpsTitleLine1": "哪吒代币自由交易转账",
+  "home.permissionlessPerpsTitleLine1": "NEZHA Token自由交易转账",
   "home.permissionlessPerpsTitleLine2": "分享网体结构",
   "home.unlimitedLiquidityTitleLine1": "在 ODIN.FUN 上的",
   "home.unlimitedLiquidityTitleLine2": "AMM机制，",
   "home.oysterAmmDescriptionLine1":
-    "是其去中心化交易生态的核心组成部分，旨在为平台上哪吒主题代币提供流动性并优化交易体验",
+    "是其去中心化交易生态的核心组成部分，旨在为平台上NEZHA主题Token提供流动性并优化交易体验",
   "home.oysterAmmDescriptionLine2": "链上的改进流动性。",
   "home.oysterAmmDescriptionLine3": "",
   "home.battleTestedTitleLine1": "",
-  "home.battleTestedTitleLine2": "哪吒的发展起源",
+  "home.battleTestedTitleLine2": "NEZHA的发展起源",
   "home.cumulativeTradingVolume":
-    "Q3 2025：NZ Token IDO + 比特币生态首发（ODIN.FUN）",
-  "home.allTimeTraders": "Q4 2025：上线ODIN.FUN流动性挖矿 + 哪吒链游Alpha测试",
+    "Q3 2025：NEZHA Token IDO + 比特币生态首发（ODIN.FUN）",
+  "home.allTimeTraders": "Q4 2025：上线ODIN.FUN流动性挖矿 + NEZHA链游Alpha测试",
   "home.pairsListed": "2025：跨链至比特币侧链（Stacks），推出“封神宇宙”DAO",
   "home.backedByIndustryLeaders": "由行业领袖支持",
   "home.oysterAmmTitleLine1": "的AMM自动做市，",
@@ -478,13 +478,13 @@ export default {
     "我们独特的AMM设计和精简的用户体验迎合所有类型的交易者。",
   "home.thirtySecondListings": "添加流动性的步骤",
   "home.thirtySecondListingsDesc":
-    "进入「流动性池」页面<br/>在 ODIN.FUN 导航栏找到 “流动性” 或 “Pool” 选项。<br/>选择交易对<br/>找到你想提供流动性的池子（如 NZ/USDT），点击“添加流动性”。<br/>输入代币数量<br/>系统会自动计算两种代币的比例（通常是 50:50），你可以手动调整数量，或选择 “Max” 全部存入。<br/>批准代币授权<br/>首次添加 LP 时，需要先 “Approve”（授权）智能合约使用你的代币（需支付 Gas 费）<br/>确认并质押 LP 代币<br/>确认交易后，你会收到 LP Token（如 ODIN-NZ-USDT LP），代表你在该池子的份额",
+    "进入「流动性池」页面<br/>在 ODIN.FUN 导航栏找到 “流动性” 或 “Pool” 选项。<br/>选择交易对<br/>找到你想提供流动性的池子（如 NEZHA/USDT），点击“添加流动性”。<br/>输入代币数量<br/>系统会自动计算两种代币的比例（通常是 50:50），你可以手动调整数量，或选择 “Max” 全部存入。<br/>批准代币授权<br/>首次添加 LP 时，需要先 “Approve”（授权）智能合约使用你的代币（需支付 Gas 费）<br/>确认并质押 LP 代币<br/>确认交易后，你会收到 LP Token（如 ODIN-NEZHA-BTC LP），代表你在该池子的份额",
   "home.unifiedLiquidity": "手续费分红机制",
   "home.unifiedLiquidityDesc":
     "ODIN.FUN 的 AMM 手续费分红通常遵循以下规则：<br/>1. 手续费来源<br/>2. 每笔交易收取 0.3% 手续费（行业标准），分配方式：<br/>LP 提供者（你）：获得 大部分手续费（如 0.25%）。<br/>平台（ODIN.FUN）：剩余部分（如 0.05%）用于生态建设或回购销毁。",
   "home.rigidRiskManagement": "严格的风险管理",
   "home.rigidRiskManagementDesc":
-    "实施比特币和哪吒最佳实践，使用户能够自信地在一个通过多次市场周期考验的协议上交易。",
+    "实施比特币和NEZHA最佳实践，使用户能够自信地在一个通过多次市场周期考验的协议上交易。",
   "header.Languages": "语言",
   "header.Products": "产品",
   "header.Home": "首页",

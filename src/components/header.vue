@@ -24,7 +24,7 @@
           src="@/static/images/logo.jpg"
           mode="scaleToFill"
         />
-        nezha
+        NEZHA
       </a>
 
       <view
@@ -48,7 +48,7 @@
           src="@/static/images/logo.jpg"
           mode="scaleToFill"
         />
-        nezha
+        NEZHA
       </a>
       <view class="right">
         <MenuLang></MenuLang>

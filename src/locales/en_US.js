@@ -4,7 +4,7 @@ export default {
   footer_products: "Products",
   footer_learning: "Learning Center",
   footer_services: "Services",
-  footer_copyright: "© {year} nezha. All rights reserved.",
+  footer_copyright: "© {year} NEZHA. All rights reserved.",
   footer_rightsReserved: "All rights reserved.",
 
   "MsgNotification.MsgNotification.404380-0": "Read",
@@ -512,26 +512,26 @@ export default {
     "The Bitcoin ecosystem is the cornerstone of the blockchain industry.",
   "home.onchainPerpsTitle1": "It has unique value and widespread influence.",
   "home.onchainPerpsSubtitleLine1":
-    "Trade Nezha tokens to maximize your returns.",
+    "Trade NEZHA tokens to maximize your returns.",
   "home.onchainPerpsSubtitleLine2": "Unlimited opportunities.",
   "home.tradeNowButton": "Trade Now",
   "home.permissionlessPerpsTitleLine1":
-    "Nezha Tokens Can Be Traded and Transferred Freely",
+    "NEZHA Tokens Can Be Traded and Transferred Freely",
   "home.permissionlessPerpsTitleLine2": "Shared Network Structure",
   "home.unlimitedLiquidityTitleLine1": "On ODIN.FUN",
   "home.unlimitedLiquidityTitleLine2": "AMM Mechanism",
   "home.oysterAmmDescriptionLine1":
-    "It is a core component of its decentralized trading ecosystem, designed to provide liquidity for Nezha-themed tokens on the platform and optimize the trading experience",
+    "It is a core component of its decentralized trading ecosystem, designed to provide liquidity for NEZHA-themed tokens on the platform and optimize the trading experience",
   "home.permissionlessPerpsContentLine2": "new pairs in under 30 seconds.",
   "home.oysterAmmDescriptionLine2":
     "combines the best of order book and AMM models fully",
   "home.oysterAmmDescriptionLine3": "onchain for improved liquidity.",
   "home.battleTestedTitleLine1": "Battle-tested across",
-  "home.battleTestedTitleLine2": "The Origins of Nezha's Development",
+  "home.battleTestedTitleLine2": "The Origins of NEZHA's Development",
   "home.cumulativeTradingVolume":
-    "Q3 2025: NZ Token IDO + Bitcoin Ecosystem Launch (ODIN.FUN)",
+    "Q3 2025: NEZHA Token IDO + Bitcoin Ecosystem Launch (ODIN.FUN)",
   "home.allTimeTraders":
-    "Q4 2025: Launch of ODIN.FUN Liquidity Mining + Nezha Chain Game Alpha Test",
+    "Q4 2025: Launch of ODIN.FUN Liquidity Mining + NEZHA Chain Game Alpha Test",
   "home.pairsListed":
     '2025: Cross-chain to Bitcoin Sidechain (Stacks), Launch of the "Fengshen Universe" DAO',
   "home.backedByIndustryLeaders": "Backed by Industry Leaders",
@@ -566,7 +566,7 @@ export default {
     "ODIN.FUN's AMM fees and dividends generally follow the following rules:<br/>1. Fee Source<br/>2. A 0.3% fee is charged for each transaction (industry standard). Distribution:<br/>LP Provider (you): Receives the majority of the fees (e.g., 0.25%).<br/>Platform (ODIN.FUN): The remaining portion (e.g., 0.05%) is used for ecosystem development or repurchase and destruction. ",
   "home.rigidRiskManagement": "Rigid Risk Management",
   "home.rigidRiskManagementDesc":
-    "Implementing Bitcoin and Nezha best practices, allowing users to confidently trade on a protocol that has been tested through multiple market cycles.",
+    "Implementing Bitcoin and NEZHA best practices, allowing users to confidently trade on a protocol that has been tested through multiple market cycles.",
   "header.Languages": "Languages",
   "header.Products": "Products",
   "header.Home": "Home",

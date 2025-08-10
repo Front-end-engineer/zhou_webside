@@ -67,7 +67,7 @@
       </view> -->
     </view>
     <view class="copyright">{{
-      $t("footer_copyright", { year: 2025, company: "ChainFutures" })
+      $t("footer_copyright", { year: 2025, company: "NEZHA" })
     }}</view>
   </view>
 
@@ -77,7 +77,7 @@
   >
     <view class="content">
       <view class="footer-copyright"
-        >© 2025 nezha. {{ $t("footer_rightsReserved") }}</view
+        >© 2025 NEZHA. {{ $t("footer_rightsReserved") }}</view
       >
       <!-- <view class="footer-community">
         <view class="footer-community-title">{{ $t("footer_community") }}</view>
